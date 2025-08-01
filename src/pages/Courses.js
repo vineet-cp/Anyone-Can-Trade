@@ -1,5 +1,6 @@
 import React from "react";
 import tick from "./../assets/images/testimonial/tick.svg"
+import whatsApp from "./../assets/images/testimonial/whatsapp.svg"
 
 const pricingData = [
   {
@@ -41,16 +42,22 @@ const Courses = () => {
 
       {/* Video Placeholder */}
       <div className="w-[320px] sm:w-[500px] h-[189px] bg-gray-300 rounded-md flex items-center justify-center text-white font-semibold">
-        {/* Replace with <video> or YouTube embed if needed */}
-        Play ▶
+        <video
+          className="w-full h-full object-cover rounded-md"
+          controls
+          preload="metadata"
+        >
+          <source src="/videos/stock-market.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
 
       {/* Pricing Cards */}
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="flex flex-wrap justify-center gap-8 mb-6">
         {pricingData.map((plan, index) => (
           <div
             key={index}
-            className="w-[260px] bg-white rounded-2xl shadow-lg border border-gray-200 p-6 flex flex-col items-center hover:shadow-2xl transition-shadow"
+            className="w-[300px] bg-white rounded-2xl shadow-xl border border-gray-200 p-6 flex flex-col items-center hover:shadow-2xl transition-shadow"
           >
             <h3 className="text-2xl font-semibold mb-2">{plan.title}</h3>
             <hr style={{backgroundColor:"rgba(0, 0, 0, 0.5)"}} className="w-full border-gray-300 my-2 border-[1.5px]" />
@@ -62,10 +69,10 @@ const Courses = () => {
             </div>
             <p className="text-xs text-[#474747]">Great for team members</p>
             <hr style={{backgroundColor:"rgba(0, 0, 0, 0.5)"}} className="w-full border-gray-300 my-2 border-[1.5px]" />
-            <ul className="text-sm text-left space-y-2 mb-4 w-full">
+            <ul className="text-sm text-left space-y-2 mb-4 w-full pb-20">
               {plan.features.map((feat, i) => (
-                <li key={i} className="flex items-center gap-2">
-                  <img src={tick} width="21px" /> {feat}
+                <li key={i} className="flex items-center gap-2 justify-between w-full">
+                  <img src={tick} width="18px" /> <span className="text-[0.8rem] w-[88%]">{feat}</span>
                 </li>
               ))}
             </ul>
@@ -74,6 +81,10 @@ const Courses = () => {
             </button>
           </div>
         ))}
+      </div>
+      <div className="fixed bottom-4 right-10 cursor-pointer flex flex-col items-center gap-1 z-50">
+        <img src={whatsApp} className="w-10 h-10" />
+        <p className="text-[0.8rem] text-black">WhatsApp</p>
       </div>
     </div>
   );
