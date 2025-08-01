@@ -6,7 +6,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="p-4 border-b border-gray-200 md:border-0">
+    <header className="px-10 md:px-24 py-4 border-b border-gray-200 md:border-0 bg-gray-300">
       <div className="flex justify-between items-center">
         <h1 className="text-[1rem] text-[#000000] font-[500]">Trading Masters of India</h1>
 

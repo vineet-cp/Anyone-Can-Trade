@@ -1,20 +1,20 @@
 // tailwind.config.js
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // tells Tailwind to scan these files for class names
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
       animation: {
-        marquee: 'marquee 15s linear infinite',
+        marquee: 'marquee 20s linear infinite', // slower speed
       },
       keyframes: {
         marquee: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(-100%)' },
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' }, // only scroll half because we duplicate the array
         },
       },
-    }
+    },
   },
   plugins: [],
 };
