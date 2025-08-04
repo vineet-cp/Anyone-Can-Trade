@@ -32,6 +32,26 @@ export default function Header() {
           >
             Courses
           </NavLink>
+            <NavLink
+            to="/mentorship"
+            className={({ isActive }) =>
+              isActive
+                ? "text-[#000000] font-semibold"
+                : "text-gray-700 hover:text-black font-[400]"
+            }
+          >
+            One on One Mentorship
+          </NavLink>
+          <NavLink
+            to="/form"
+            className={({ isActive }) =>
+              isActive
+                ? "text-[#000000] font-semibold"
+                : "text-gray-700 hover:text-black font-[400]"
+            }
+          >
+            Form
+          </NavLink>
           <NavLink
             to="/contact"
             className="text-white font-normal text-[0.8rem] rounded-3xl px-3 py-3 bg-black"
@@ -74,6 +94,28 @@ export default function Header() {
             }
           >
             Courses
+          </NavLink>
+                    <NavLink
+            to="/mentorship"
+            onClick={() => setMenuOpen(false)}
+            className={({ isActive }) =>
+              isActive
+                ? "text-[#000000] font-semibold"
+                : "text-gray-700 hover:text-black font-normal"
+            }
+          >
+            One on One Mentorship
+          </NavLink>
+        <NavLink
+            to="/form"
+            onClick={() => setMenuOpen(false)}
+            className={({ isActive }) =>
+              isActive
+                ? "text-[#000000] font-semibold"
+                : "text-gray-700 hover:text-black font-normal"
+            }
+          >
+            Form
           </NavLink>
           <NavLink
             to="/contact"
