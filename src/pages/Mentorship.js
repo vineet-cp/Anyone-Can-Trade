@@ -1,8 +1,14 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 const Mentorship = () => {
   return (
     <>
+    <Helmet>
+      <title>One-on-One Trading Mentorship | Any One Can Trade</title>
+      <meta name="description" content="Get personalized one-on-one trading mentorship with experienced traders. Learn at your pace and gain confidence in the stock market." />
+      <meta name="keywords" content="personal trading mentorship, stock market mentor, trading coach, learn trading one-on-one, beginner trading help" />
+    </Helmet>
     <div className="text-center p-8">
       <p className="max-w-2xl mx-auto text-gray-700">
         We all India's one and only Institute with a practical way of teaching,

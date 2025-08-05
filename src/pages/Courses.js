@@ -1,6 +1,7 @@
 import React from "react";
 import tick from "./../assets/images/testimonial/tick.svg"
 import whatsApp from "./../assets/images/testimonial/whatsapp.svg"
+import { Helmet } from "react-helmet";
 
 const pricingData = [
   {
@@ -37,7 +38,13 @@ const pricingData = [
 
 const Courses = () => {
   return (
-    <div className="mt-7 flex flex-col gap-10 items-center px-4">
+    <>
+      <Helmet>
+      <title>Advanced Trading Courses | Any One Can Trade</title>
+      <meta name="description" content="Explore advanced trading strategies with our self-paced video courses. Ideal for those with basic knowledge who want to level up their skills." />
+      <meta name="keywords" content="advanced trading courses, trading videos, technical analysis course, stock trading education, self-paced trading" />
+    </Helmet>
+        <div className="mt-7 flex flex-col gap-10 items-center px-4">
       <h2 className="text-2xl font-[500] text-center">Video about Courses</h2>
 
       {/* Video Placeholder */}
@@ -87,6 +94,7 @@ const Courses = () => {
         <p className="text-[0.8rem] text-black">WhatsApp</p>
       </div>
     </div>
+    </>
   );
 };
 
