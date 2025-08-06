@@ -18,7 +18,7 @@ const PersonalForm = () => {
   };
   const handleSubmit=()=>{
     console.log("form",form)
-    // triggerPayment(form)
+    triggerPayment(form)
   }
   return (
     <>
