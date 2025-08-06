@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
+import PersonalForm from "../components/PersonalForm";
 
 const Mentorship = () => {
+  const [showPersonalDetails, setShowPersonalDetails] = useState(false)
   return (
     <>
     <Helmet>
@@ -10,7 +12,7 @@ const Mentorship = () => {
       <meta name="keywords" content="personal trading mentorship, stock market mentor, trading coach, learn trading one-on-one, beginner trading help" />
     </Helmet>
     <div className="text-center p-8">
-      <p className="max-w-2xl mx-auto text-gray-700">
+      <p className="max-w-2xl mx-auto text-[1.1rem] text-gray-700">
         We all India's one and only Institute with a practical way of teaching,
         without hands-on approach, we ensure you not only learn the theory but
         apply it practically.
@@ -35,11 +37,15 @@ const Mentorship = () => {
       <button
         style={{ backgroundColor: "rgba(110, 147, 210, 0.47)" }}
         className="text-white px-24  py-3 rounded-full font-normal transition"
-        // onClick={() => navigate("/courses")}
+        onClick={() => setShowPersonalDetails(true)}
       >
         Book Now
       </button>
     </div>
+    {
+      showPersonalDetails && 
+      <PersonalForm />
+    }
     </>
   );
 };
