@@ -1,6 +1,6 @@
 import React from "react";
-import tick from "./../assets/images/testimonial/tick.svg"
-import whatsApp from "./../assets/images/testimonial/whatsapp.svg"
+import tick from "./../assets/images/testimonial/tick.svg";
+import whatsApp from "./../assets/images/testimonial/whatsapp.svg";
 import { Helmet } from "react-helmet";
 
 const pricingData = [
@@ -40,60 +40,185 @@ const Courses = () => {
   return (
     <>
       <Helmet>
-      <title>Advanced Trading Courses | Any One Can Trade</title>
-      <meta name="description" content="Explore advanced trading strategies with our self-paced video courses. Ideal for those with basic knowledge who want to level up their skills." />
-      <meta name="keywords" content="advanced trading courses, trading videos, technical analysis course, stock trading education, self-paced trading" />
-    </Helmet>
-        <div className="mt-7 flex flex-col gap-10 items-center px-4">
-      <h2 className="text-2xl font-[500] text-center">Video about Courses</h2>
-
-      {/* Video Placeholder */}
-      <div className="w-[320px] sm:w-[500px] h-[189px] bg-gray-300 rounded-md flex items-center justify-center text-white font-semibold">
-        <video
-          className="w-full h-full object-cover rounded-md"
-          controls
-          preload="metadata"
-        >
-          <source src="/videos/stock-market.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      {/* Pricing Cards */}
-      <div className="flex flex-wrap justify-center gap-8 mb-6">
-        {pricingData.map((plan, index) => (
-          <div
-            key={index}
-            className="w-[300px] bg-white rounded-2xl shadow-xl border border-gray-200 p-6 flex flex-col items-center hover:shadow-2xl transition-shadow"
+        <title>
+          Courses | Trading Masters India – Indias Best Online Stock Market
+          Education Institute
+        </title>
+        <meta
+          name="description"
+          content="Explore advanced trading strategies with our self-paced video courses. Ideal for those with basic knowledge who want to level up their skills."
+        />
+        <meta
+          name="keywords"
+          content="advanced trading courses, trading videos, technical analysis course, stock trading education, self-paced trading"
+        />
+      </Helmet>
+      <div className="mt-4 flex flex-col gap-3 items-center px-4">
+        <h2 className="text-2xl font-[500] text-center">Courses</h2>
+        <div className="w-full max-w-5xl overflow-x-auto">
+          <table className="min-w-[720px] table-fixed border border-gray-300 rounded-md text-left text-[1rem] text-gray-700">
+            <thead>
+              <tr className="bg-gray-100 text-black text-[1.1rem]">
+                <th className="w-1/3 p-3 border-r border-gray-300 font-semibold">
+                  First Month
+                </th>
+                <th className="w-1/3 p-3 border-r border-gray-300 font-semibold">
+                  Second Month
+                </th>
+                <th className="w-1/3 p-3 font-semibold">Third Month</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="p-4 border-r border-t border-gray-300">
+                  Theoretical Part.
+                </td>
+                <td className="p-4 border-r border-t border-gray-300">
+                  Practical application in the live market.
+                  <br />
+                  Risk Management and Trading Psychology.
+                </td>
+                <td className="p-4 border-t border-gray-300">
+                  For refining your Strategies in the market and submission of
+                  your track sheet to us.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-[0.95rem] text-gray-600 text-center">
+          Note: We teach 2 batches, Weekday and Weekend batches for our
+          students’ convenience. <br />
+          Courses are offered in English, Hindi & Telugu.
+        </p>
+        {/* Video Placeholder */}
+        <h2 className="text-2xl font-[500] text-center mt-4">
+          Please watch this video for clear understanding of our course
+        </h2>
+        <div className="w-[320px] sm:w-[500px] h-[189px] bg-gray-300 rounded-md flex items-center justify-center text-white font-semibold">
+          <video
+            className="w-full h-full object-cover rounded-md"
+            controls
+            preload="metadata"
           >
-            <h3 className="text-2xl font-semibold mb-2">{plan.title}</h3>
-            <hr style={{backgroundColor:"rgba(0, 0, 0, 0.5)"}} className="w-full border-gray-300 my-2 border-[1.5px]" />
-            <div className="flex items-center text-sm py-2 px-1 relative w-full">
-              <span style={{color:"rgba(29, 78, 216, 0.5)"}} className="font-normal text-[1.2rem] border-r-[2px] border-[#00000080] w-[42%] text-center">{plan.price}</span>
-              {/* <span style={{color:"rgba(0, 0, 0, 0.5)"}} className="mx-2 font-[600]">|</span> */}
-              <span className="text-black font-normal text-[1.2rem] w-[42%] text-center">{plan.free}</span>
-              <span className="text-xs text-gray-400 ml-1 absolute top-0 right-[-0.25rem]">per month</span>
-            </div>
-            <p className="text-xs text-[#474747]">Great for team members</p>
-            <hr style={{backgroundColor:"rgba(0, 0, 0, 0.5)"}} className="w-full border-gray-300 my-2 border-[1.5px]" />
-            <ul className="text-sm text-left space-y-2 mb-4 w-full pb-20">
-              {plan.features.map((feat, i) => (
-                <li key={i} className="flex items-center gap-2 justify-between w-full">
-                  <img src={tick} width="18px" /> <span className="text-[0.8rem] w-[88%]">{feat}</span>
-                </li>
-              ))}
-            </ul>
-            <button className="w-full border border-black py-2 rounded-full font-semibold text-sm hover:bg-black hover:text-white transition">
-              PAY NOW
-            </button>
-          </div>
-        ))}
+            <source src="/videos/stock-market.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        {/* Pricing Cards */}
+        <div className="w-full max-w-5xl overflow-x-auto">
+          <table className="min-w-[720px] table-fixed border border-gray-300 rounded-md text-left text-[1rem] text-gray-700">
+            <thead className="bg-gray-100 text-black text-[1rem]">
+              <tr>
+                <th className="w-1/4 p-4 border-r border-gray-300 font-semibold">
+                  Features
+                </th>
+                <th className="w-1/2 p-4 border-r border-gray-300 font-semibold">
+                  ACT Achiever
+                </th>
+                <th className="w-1/2 p-4 font-semibold">ACT Pro</th>
+              </tr>
+            </thead>
+            <tbody className="text-[0.98rem]">
+              <tr className="border-t border-gray-300">
+                <td className="p-4 border-r border-gray-300 font-medium">
+                  Course Details
+                </td>
+                <td className="p-4 border-r border-gray-300">
+                  <ul className="list-disc pl-5 space-y-1">
+                    <li>1 month of theory</li>
+                    <li>
+                      2<sup>nd</sup> Month: Roadmap for the Practical
+                      application in live market will be given i.e, Paper
+                      Trading- Equity -Option Hedging – Naked options Trading.
+                    </li>
+                    <li>
+                      3<sup>rd</sup> Month: Mastering Risk Management & Trading
+                      Psychology.
+                    </li>
+                  </ul>
+                  <p className="mt-2">
+                    Students have to follow the roadmap and submit the track
+                    sheet.
+                  </p>
+                </td>
+                <td className="p-4">
+                  <ul className="list-disc pl-5 space-y-1">
+                    <li>1 month of theory</li>
+                    <li>
+                      2<sup>nd</sup> Month: Roadmap for the Practical
+                      application in live market will be given i.e, Paper
+                      Trading- Equity -Option Hedging – Naked options Trading.
+                    </li>
+                    <li>
+                      3<sup>rd</sup> Month: Mastering Risk Management & Trading
+                      Psychology.
+                    </li>
+                  </ul>
+                  <p className="mt-2">
+                    Students have to follow the roadmap and submit the track
+                    sheet.
+                  </p>
+                </td>
+              </tr>
+
+              <tr className="border-t border-gray-300">
+                <td className="p-4 border-r border-gray-300 font-medium">
+                  Live Q/A
+                </td>
+                <td className="p-4 border-r border-gray-300">Available</td>
+                <td className="p-4">Available</td>
+              </tr>
+
+              <tr className="border-t border-gray-300">
+                <td className="p-4 border-r border-gray-300 font-medium">
+                  Live Assistance
+                </td>
+                <td className="p-4 border-r border-gray-300">Not Available</td>
+                <td className="p-4">Available</td>
+              </tr>
+
+              <tr className="border-t border-gray-300">
+                <td className="p-4 border-r border-gray-300 font-medium">
+                  Price
+                </td>
+                <td className="p-4 border-r border-gray-300 font-semibold">
+                  ₹20,000/-
+                </td>
+                <td className="p-4 font-semibold">₹36,000/-</td>
+              </tr>
+
+              <tr className="border-t border-gray-300">
+                <td className="p-4 border-r border-gray-300 font-medium">
+                  Enroll
+                </td>
+                <td className="p-4 border-r border-gray-300">
+                  <button className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition">
+                    Join Now
+                  </button>
+                </td>
+                <td className="p-4">
+                  <button className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition">
+                    Join Now
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-[1rem] m-0 font-semibold italic text-center text-gray-800">
+          “Don’t Procrastinate, it will delay your dreams”
+        </p>
+        <p className="text-[0.95rem] text-gray-600 text-center mb-4">
+          Note: If we are unable to make you a successful Trader, we will refund
+          your money*.
+        </p>
+        <div className="fixed bottom-4 right-10 cursor-pointer flex flex-col items-center gap-1 z-50">
+          <img src={whatsApp} className="w-10 h-10" />
+          <p className="text-[0.8rem] text-black">WhatsApp</p>
+        </div>
       </div>
-      <div className="fixed bottom-4 right-10 cursor-pointer flex flex-col items-center gap-1 z-50">
-        <img src={whatsApp} className="w-10 h-10" />
-        <p className="text-[0.8rem] text-black">WhatsApp</p>
-      </div>
-    </div>
     </>
   );
 };

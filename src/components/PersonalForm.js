@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import useRazorpayPayment from "../hooks/useRazorpayPayment";
 
-const PersonalForm = () => {
+const PersonalForm = ({setShowTradingForm}) => {
   const {triggerPayment}= useRazorpayPayment()
   const [form, setForm] = useState({
     name: "",
@@ -18,7 +18,8 @@ const PersonalForm = () => {
   };
   const handleSubmit=()=>{
     console.log("form",form)
-    triggerPayment(form)
+    // triggerPayment(form)
+    setShowTradingForm(true)
   }
   return (
     <>
@@ -88,13 +89,14 @@ const PersonalForm = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mt-2 mb-2">
+      <div className="flex flex-col gap-2 items-center mt-3 mb-2">
+        <p className="font-medium">Start Trading with a Personal Mentor.</p>
          <button
         style={{ backgroundColor: "rgba(110, 147, 210, 0.47)" }}
         onClick={handleSubmit}
         className="text-[#000000] px-24  py-3 rounded-full font-normal transition"
       >
-        Pay Now
+        Pay 999/-
       </button>
       </div>
     </>

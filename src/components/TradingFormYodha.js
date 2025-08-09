@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-const TradingForm = () => {
+const TradingFormYodha = () => {
   return (
     <div className="rounded-lg py-5 px-4 sm:px-8 md:px-[9rem] flex flex-col gap-6 w-[95%] mx-auto bg-[#E3C45D0D] shadow-sm">
       <h2 className="text-xl font-normal text-center">Trading Background</h2>
@@ -63,11 +63,8 @@ const TradingForm = () => {
               <input type="radio" name="experience" className="mr-2" /> Long term Investments
             </label>
           </div>
-        </div>
-
-        {/* Right Column */}
-        <div className="flex flex-col gap-6 md:pl-8">
-          {/* Q9 */}
+    
+         {/* Q9 */}
           <div className='flex flex-col items-start'>
             <p className="mb-1 text-start">9. What’s your capital</p>
             <label className="block ml-4 md:ml-6">
@@ -83,55 +80,83 @@ const TradingForm = () => {
               <input type="radio" name="learn" className="mr-2" /> Above 10 lakhs
             </label>
           </div>
+        </div>
+
+        {/* Right Column */}
+        <div className="flex flex-col gap-6 md:pl-8">
 
           {/* Q10 */}
           <div className='flex flex-col items-start'>
-            <p className="mb-1 text-start">10. With Our ACT Mastery Mentorship, we will make you a successful trader in 3 months, Will you pay 80K for the 1:1 mentorship.</p>
+            <p className="mb-1 text-start">10. Monthly return on your capital.</p>
             <label className="block ml-4 md:ml-6">
-              <input type="radio" name="profit" className="mr-2" /> Yes
+              <input type="radio" name="profit" className="mr-2" /> Making losses
             </label>
             <label className="block ml-4 md:ml-6">
-              <input type="radio" name="profit" className="mr-2" /> No
+              <input type="radio" name="profit" className="mr-2" /> 2-5%
             </label>
             <label className="block ml-4 md:ml-6">
-              <input type="radio" name="profit" className="mr-2" /> Maybe
+              <input type="radio" name="profit" className="mr-2" /> 5-10%
+            </label>
+            <label className="block ml-4 md:ml-6">
+              <input type="radio" name="profit" className="mr-2" /> Above 10%
             </label>
           </div>
 
           {/* Q11 */}
-          {/* <div className='flex flex-col items-start'>
+          <div className='flex flex-col items-start'>
             <p className="mb-1 text-start">
-              11. If we solve your problem and make you profitable in 2 weeks,
-              will you be able to pay a fee of 20,000/- for 1:1 mentorship?
+              11. Trading Experience
             </p>
             <label className="block ml-4 md:ml-6">
-              <input type="radio" name="mentorship" className="mr-2" /> Yes
+              <input type="radio" name="mentorship" className="mr-2" /> 0-1 year
             </label>
             <label className="block ml-4 md:ml-6">
-              <input type="radio" name="mentorship" className="mr-2" /> No
+              <input type="radio" name="mentorship" className="mr-2" /> 1-3 years
             </label>
-          </div> */}
+            <label className="block ml-4 md:ml-6">
+              <input type="radio" name="mentorship" className="mr-2" /> Above 3 years
+            </label>
+          </div>
 
           {/* Q12 */}
-          {/* <div className='flex flex-col items-start'>
-            <p className="mb-1 text-start">12. What is your trading style mostly?</p>
+          <div className='flex flex-col items-start'>
+            <p className="mb-1 text-start">12. How did you learn Trading</p>
             <label className="block ml-4 md:ml-6">
-              <input type="radio" name="style" className="mr-2" /> Intraday
+              <input type="radio" name="style" className="mr-2" /> Free YouTube Videos
             </label>
             <label className="block ml-4 md:ml-6">
-              <input type="radio" name="style" className="mr-2" /> Swing
+              <input type="radio" name="style" className="mr-2" /> Paid online courses
             </label>
             <label className="block ml-4 md:ml-6">
-              <input type="radio" name="style" className="mr-2" /> Long Term
+              <input type="radio" name="style" className="mr-2" /> Paid Offline courses
+            </label>
+          </div>
+
+                    {/* Q13 */}
+          <div className='flex flex-col items-start'>
+            <p className="mb-1 text-start">13. Are you getting Consistent profits monthly</p>
+            <label className="block ml-4 md:ml-6">
+              <input type="radio" name="style" className="mr-2" /> Yes
             </label>
             <label className="block ml-4 md:ml-6">
-              <input type="radio" name="style" className="mr-2" /> All
+              <input type="radio" name="style" className="mr-2" /> No
             </label>
-          </div> */}
+          </div>
+
+                    {/* Q14 */}
+          <div className='flex flex-col items-start'>
+            <p className="mb-1 text-start">14. If we solve your problem and make you profitable in 1 month, Will you be able to pay a fee of 20k for this 1:1 mentorship</p>
+            <label className="block ml-4 md:ml-6">
+              <input type="radio" name="style" className="mr-2" /> Yes
+            </label>
+            <label className="block ml-4 md:ml-6">
+              <input type="radio" name="style" className="mr-2" /> No
+            </label>
+          </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default TradingForm;
+export default TradingFormYodha
