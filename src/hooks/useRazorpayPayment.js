@@ -13,7 +13,7 @@ const useRazorpayPayment = () => {
 					"Content-Type": "application/json",
 				},
 				body: JSON.stringify({
-					"amount": 500,
+					"amount": 999,
 					"currency": "INR",
 					"receipt": "order_rcptid_11"
 				}),
@@ -29,9 +29,13 @@ const useRazorpayPayment = () => {
 
 			// Step 2: Configure Razorpay popup
 			const options = {
-				...data,
+				amount:data.amount,
+				currency:data.currency,
+				order_id:data.id,
+				key:"rzp_test_yLpAB2BjwiwHPp",
 				// prefill: form,
 				handler: async function (response) {
+					console.log(response)
 					// Step 3: Verify payment with backend
 					await fetch("http://localhost:8080/api/verify-payment", {
 						method: "POST",
@@ -39,9 +43,9 @@ const useRazorpayPayment = () => {
 							"Content-Type": "application/json",
 						},
 						body: JSON.stringify({
-							razorpay_payment_id: response.razorpay_payment_id,
-							razorpay_order_id: response.razorpay_order_id,
-							razorpay_signature: response.razorpay_signature,
+							paymentId: response.razorpay_payment_id,
+							orderId: data.id,
+							razorpaySignature: response.razorpay_signature,
 						}),
 					});
 					alert("Payment successful and verified");

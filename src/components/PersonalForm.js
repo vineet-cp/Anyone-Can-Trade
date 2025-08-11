@@ -18,7 +18,7 @@ const PersonalForm = ({setShowTradingForm}) => {
   };
   const handleSubmit=()=>{
     console.log("form",form)
-    // triggerPayment(form)
+    triggerPayment(form)
     setShowTradingForm(true)
   }
   return (
