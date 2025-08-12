@@ -53,26 +53,26 @@ const Courses = () => {
           content="advanced trading courses, trading videos, technical analysis course, stock trading education, self-paced trading"
         />
       </Helmet>
-      <div className="mt-4 flex flex-col gap-3 items-center px-4">
+      <div className="mt-[6rem] flex flex-col gap-3 items-center px-4">
         <h2 className="text-4xl font-[500] text-center">Courses</h2>
         <section className="text-center px-6 py-4 max-w-6xl mx-auto">
           <p className="text-2xl font-medium mb-6">
             All Our Courses are curated for 3 months
           </p>
 
-          <p className="text-[1.5rem] mb-3 ">
+          <p className="text-[1.5rem] text-start mb-3 ">
             <span className="font-semibold">First Month – </span>
             Theoretical Part.
           </p>
 
-          <p className="text-[1.5rem] mb-3">
+          <p className="text-[1.5rem] text-start mb-3">
             <span className="font-semibold">Second Month – </span>
             Practical application in the live market.
             <br />
             Risk Management and Trading Psychology.
           </p>
 
-          <p className="text-[1.5rem]">
+          <p className="text-[1.5rem] text-start">
             <span className="font-semibold">Third Month – </span>
             For refining your Strategies in the market and submission of your
             track sheet to us.
@@ -84,10 +84,10 @@ const Courses = () => {
           Courses are offered in English, Hindi & Telugu.
         </p>
         {/* Video Placeholder */}
-        <h2 className="text-2xl font-[500] text-center mt-4">
+        <h2 className="text-2xl font-[500] text-center mt-6">
           Please watch this video for clear understanding of our course
         </h2>
-        <div className="w-[320px] sm:w-[600px] h-[189px] bg-gray-300 rounded-md flex items-center justify-center text-white font-semibold">
+        <div className="w-[320px] sm:w-[900px] h-[400px] bg-gray-300 rounded-md flex items-center justify-center text-white font-semibold">
           <video
             className="w-full h-full object-cover rounded-md"
             controls
@@ -99,7 +99,7 @@ const Courses = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="w-full max-w-5xl overflow-x-auto">
+        <div className="w-full max-w-5xl overflow-x-auto mt-4">
           <table className="min-w-[720px] table-fixed border border-gray-300 rounded-md text-left text-[1rem] text-gray-700">
           <thead className="bg-gray-100 text-black text-[1.3rem]">
             <tr>

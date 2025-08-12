@@ -100,14 +100,25 @@ export default function Testimonials() {
       <h2 className="text-4xl font-[500] mb-2">Testimonials</h2>
       <h3 className="text-xl font-[500] mb-4">Our Trading Masters</h3>
 
-      <div className="w-full py-4">
-        <div className="inline-flex animate-marquee space-x-8 hover:[animation-play-state:paused]">
-          {testimonials.concat(testimonials).map((t, i) => (
-          <div key={i} className="relative flex-shrink-0 w-[21rem] min-h-[14rem] group-hover:min-h-[20rem] transition-all duration-300 z-0">
-            <div className="absolute top-[-0.5rem] left-[-0.5rem] w-[22rem] min-h-[15rem] group-hover:min-h-[21rem] rounded-xl bg-gray-100 shadow-lg z-0 transition-all duration-300"></div>
+    <div className="w-full py-4 overflow-hidden">
+      <div className="inline-flex animate-marquee items-start space-x-8">
+        {testimonials.concat(testimonials).map((t, i) => (
+          <div
+            key={i}
+            className="relative flex-shrink-0 w-[21rem] min-h-[14rem] transition-all duration-300 z-0"
+          >
+            {/* Background card for shadow effect */}
+            <div
+              className="absolute top-[-0.5rem] left-[-0.5rem] w-[22rem] min-h-[15rem] rounded-xl bg-gray-100 shadow-lg z-0 transition-all duration-300 hover:min-h-[21rem]"
+            ></div>
 
-            <div className="relative z-10 w-full h-full bg-white rounded-xl shadow-lg px-4 py-4 hover:scale-105 transition-transform duration-300 flex flex-col justify-between overflow-hidden group">
-              <p className="text-[1rem] italic text-[#474747] mt-4 line-clamp-5 group-hover:line-clamp-none transition-all duration-300">
+            {/* Main card content */}
+            <div
+              className="relative z-10 w-full h-full bg-white rounded-xl shadow-lg px-4 py-4 hover:scale-105 hover:min-h-[20rem] transition-all duration-300 flex flex-col justify-between overflow-hidden"
+            >
+              <p
+                className="text-[1rem] italic text-[#474747] mt-4 line-clamp-5 hover:line-clamp-none transition-all duration-300"
+              >
                 "{t.description}"
               </p>
               <div className="mt-4 flex items-end justify-between">
@@ -120,6 +131,7 @@ export default function Testimonials() {
                     <p className="text-xs text-gray-500">{t.profession}</p>
                   </div>
                 </div>
+                {/* Uncomment if needed */}
                 {/* {!t.anonymous && (
                   <button className="text-sm text-[#474747] hover:underline">
                     Visit Profile
@@ -128,9 +140,9 @@ export default function Testimonials() {
               </div>
             </div>
           </div>
-          ))}
-        </div>
+        ))}
       </div>
+    </div>
     </div>
   );
 }

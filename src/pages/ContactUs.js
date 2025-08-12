@@ -28,7 +28,7 @@ const ContactUs = () => {
       <meta name="keywords" content="contact trading mentor, get in touch trading, trading course support, ask trading questions" />
     </Helmet>
       <div>
-      <div className="rounded-lg p-5 flex flex-col gap-4 w-full max-w-[600px] mx-auto bg-[#E3C45D0D] shadow-sm mt-3">
+      <div className="rounded-lg px-5 flex flex-col gap-4 w-full max-w-[600px] mx-auto bg-[#E3C45D0D] shadow-sm mt-[6rem]">
         <div>
           <h2 className="text-xl font-normal text-center">Personal Details</h2>
         </div>

@@ -3,7 +3,7 @@ import React from 'react';
 const VideoSection = () => {
   return (
     <div className='mt-1 flex flex-col items-center'>
-      <p className="max-w-5xl mx-auto text-[1.3rem] text-gray-700 mt-4 text-center m-0">
+      <p className="px-3 md:px-0 md:max-w-5xl mx-auto text-[1.3rem] text-gray-700 mt-4 text-center m-0">
         Please watch this short video, this will clear all your doubts regarding us and the stock market.
       </p>
       <div className='w-[90%] sm:w-[70%] md:w-[65%] bg-black rounded-md overflow-hidden mt-3'>

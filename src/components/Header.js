@@ -6,9 +6,12 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="px-10 md:px-24 py-4 border-b border-gray-200 md:border-0 bg-gray-300">
+    <header className="px-8 md:px-24 py-3 border-b border-gray-200 md:border-0 bg-gray-300 fixed top-0 left-0 right-0 z-50">
       <div className="flex justify-between items-center">
-        <h1 className="text-[1.4rem] text-[#000000] font-[500]">Trading Masters of India</h1>
+        <div className="flex items-center gap-1 md:gap-1.5">
+          <img src="/TMI_Logo.png" width={"60px"} height={"60px"}/>
+          <h1 className="text-[1rem] md:text-[1.4rem] text-[#000000] font-[500]">Trading Masters of India</h1>
+        </div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 items-center text-[1.2rem]">

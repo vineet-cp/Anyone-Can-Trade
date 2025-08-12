@@ -22,7 +22,7 @@ const Mentorship = () => {
           content="personal trading mentorship, stock market mentor, trading coach, learn trading one-on-one, beginner trading help"
         />
       </Helmet>
-      <div className="text-center p-8">
+      <div className="text-center px-8 mt-[6rem]">
         <h2 className="text-4xl font-[600] text-center">1:1 Mentorship</h2>
         <p className="text-2xl text-black text-center font-medium mt-2">
           Only For Determined Traders.

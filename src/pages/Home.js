@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 
 export default function Home() {
   return (
-    <div className="rounded-md mt-7">
+    <div className="rounded-md mt-[5rem]">
       <Helmet>
       <title>Trading Masters India – Indias Best Online Stock Market Education Institute</title>
       <meta name="description" content="India’s only Institute for hands-on Trading. You won’t just learn the theory, but also get practical expertise to become a successful trader in 3 months." />
