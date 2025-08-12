@@ -8,10 +8,10 @@ export default function Header() {
   return (
     <header className="px-10 md:px-24 py-4 border-b border-gray-200 md:border-0 bg-gray-300">
       <div className="flex justify-between items-center">
-        <h1 className="text-[1rem] text-[#000000] font-[500]">Trading Masters of India</h1>
+        <h1 className="text-[1.4rem] text-[#000000] font-[500]">Trading Masters of India</h1>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-4 items-center">
+        <nav className="hidden md:flex space-x-6 items-center text-[1.2rem]">
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -42,7 +42,7 @@ export default function Header() {
           >
             One on One Mentorship
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/form"
             className={({ isActive }) =>
               isActive
@@ -51,10 +51,10 @@ export default function Header() {
             }
           >
             Form
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/contact"
-            className="text-white font-normal text-[0.8rem] rounded-3xl px-3 py-3 bg-black"
+            className="text-white font-normal text-[1rem] rounded-3xl px-3 py-3 bg-black"
           >
             Contact Us
           </NavLink>

@@ -3,10 +3,10 @@ import React from 'react';
 const VideoSection = () => {
   return (
     <div className='mt-1 flex flex-col items-center'>
-      <p className="max-w-3xl mx-auto text-[1.1rem] text-gray-700 mt-4 text-center m-0">
+      <p className="max-w-5xl mx-auto text-[1.3rem] text-gray-700 mt-4 text-center m-0">
         Please watch this short video, this will clear all your doubts regarding us and the stock market.
       </p>
-      <div className='w-[90%] sm:w-[70%] md:w-[50%] bg-black rounded-md overflow-hidden mt-3'>
+      <div className='w-[90%] sm:w-[70%] md:w-[65%] bg-black rounded-md overflow-hidden mt-3'>
         <video
           className="w-full h-[300px] object-cover"
           controls
@@ -16,8 +16,8 @@ const VideoSection = () => {
           Your browser does not support the video tag.
         </video>
       </div>
-      <p className="max-w-2xl mx-auto text-gray-700 mt-4 text-center px-4">
-       Start Your Journey NowLearn And Earn
+      <p className="max-w-2xl mx-auto text-gray-700 mt-4 text-center px-4 text-[1.3rem]">
+       Learn And Earn
       </p>
     </div>
   );

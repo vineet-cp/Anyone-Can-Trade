@@ -97,7 +97,7 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <div className="flex flex-col items-center gap-2 mt-5 mb-5 px-4 relative">
-      <h2 className="text-2xl font-[500] mb-2">Testimonials</h2>
+      <h2 className="text-4xl font-[500] mb-2">Testimonials</h2>
       <h3 className="text-xl font-[500] mb-4">Our Trading Masters</h3>
 
       <div className="w-full py-4">
@@ -107,7 +107,7 @@ export default function Testimonials() {
             <div className="absolute top-[-0.5rem] left-[-0.5rem] w-[22rem] min-h-[15rem] group-hover:min-h-[21rem] rounded-xl bg-gray-100 shadow-lg z-0 transition-all duration-300"></div>
 
             <div className="relative z-10 w-full h-full bg-white rounded-xl shadow-lg px-4 py-4 hover:scale-105 transition-transform duration-300 flex flex-col justify-between overflow-hidden group">
-              <p className="text-[0.83rem] italic text-[#474747] mt-4 line-clamp-5 group-hover:line-clamp-none transition-all duration-300">
+              <p className="text-[1rem] italic text-[#474747] mt-4 line-clamp-5 group-hover:line-clamp-none transition-all duration-300">
                 "{t.description}"
               </p>
               <div className="mt-4 flex items-end justify-between">

@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        marquee: 'marquee 20s linear infinite', // slower speed
+        marquee: 'marquee 40s linear infinite', // slower speed
       },
       keyframes: {
         marquee: {

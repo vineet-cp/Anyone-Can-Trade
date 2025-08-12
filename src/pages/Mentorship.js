@@ -23,14 +23,14 @@ const Mentorship = () => {
         />
       </Helmet>
       <div className="text-center p-8">
-        <h2 className="text-2xl font-[500] text-center">1:1 Mentorship</h2>
-        <p className="text-[1.2rem] text-black text-center font-medium mt-2">
+        <h2 className="text-4xl font-[600] text-center">1:1 Mentorship</h2>
+        <p className="text-2xl text-black text-center font-medium mt-2">
           Only For Determined Traders.
         </p>
       </div>
       <div className="mt-2 flex flex-col items-center">
         {/* 🔼 New paragraph block above the video */}
-        <div className="w-[90%] sm:w-[70%] md:w-[50%] mb-4 text-left text-gray-800 text-[1.1rem] leading-relaxed">
+        <div className="w-[90%] sm:w-[70%] mb-4 text-left text-gray-800 text-[1.3rem] leading-relaxed">
           <p>
             Unlock your trading potential with{" "}
             <span className="font-semibold">
@@ -49,11 +49,11 @@ const Mentorship = () => {
           </p>
         </div>
 
-        <p className="max-w-2xl mx-auto text-gray-700 mt-2 text-center px-4 font-medium text-[0.98rem]">
+        <p className="max-w-3xl mx-auto text-gray-700 mt-2 text-center px-4 font-medium text-[1.3rem]">
           Please watch this video for clear understanding of our Programmes
         </p>
         {/* 🎥 Video block */}
-        <div className="w-[90%] sm:w-[70%] md:w-[50%] bg-black rounded-md overflow-hidden">
+        <div className="w-[90%] sm:w-[70%] bg-black rounded-md overflow-hidden">
           <video
             className="w-full h-[300px] object-cover"
             controls
@@ -67,9 +67,9 @@ const Mentorship = () => {
 
       {/* 📌 New ACT Mastery Section */}
       <div className="flex justify-center items-center w-[100%]">
-      <div className="w-[90%] sm:w-[70%] md:w-[50%] mt-8 mb-4 text-left text-gray-800 text-[1.1rem] leading-relaxed">
-        <h3 className="text-2xl font-bold">ACT Mastery</h3>
-        <p className="mt-3 text-gray-800 leading-relaxed">
+      <div className="w-[90%] sm:w-[70%] mt-8 mb-4 text-left text-gray-800 text-[1.1rem] leading-relaxed">
+        <h3 className="text-4xl font-bold">ACT Mastery</h3>
+        <p className="mt-3 text-gray-800 leading-relaxed text-[1.3rem]">
           Dive into the stock market with our exclusive 1-to-1{" "}
           <span className="text-black font-medium">personalized</span>{" "}
           program, tailored for <em>beginners</em> aiming to carve out a
@@ -78,13 +78,13 @@ const Mentorship = () => {
           your trading skills from the ground up. Your mentor is your personal
           coach, dedicated to your success in the Stock market.
         </p>
-        <p className="mt-2 font-medium text-gray-900">
+        <p className="mt-2 font-medium text-gray-900 text-[1.3rem]">
           This Program is Exclusively for Determined Beginners and Serious
           Investors.
         </p>
 
-        <h4 className="mt-6 text-xl font-semibold">Key Features:</h4>
-        <ul className="mt-2 space-y-2 text-gray-700 list-disc pl-6">
+        <h4 className="mt-6 text-2xl font-semibold">Key Features:</h4>
+        <ul className="mt-2 space-y-2 text-gray-700 list-disc pl-6 text-[1.3rem]">
           <li>
             As a TMI 1:1 member, you receive our highest level of support.
           </li>
@@ -107,12 +107,12 @@ const Mentorship = () => {
       </div>
 
       <div className="text-center py-3 flex flex-col gap-2 items-center">
-        <p className="max-w-2xl mx-auto text-gray-700 mt-6 text-center px-4">
+        <p className="max-w-4xl mx-auto text-2xl text-gray-700 mt-6 text-center px-4">
           To Know more talk to our team
         </p>
         <button
           style={{ backgroundColor: "rgba(110, 147, 210, 0.47)" }}
-          className="text-black px-24  py-3 rounded-full font-medium transition"
+          className="text-black px-24  py-3 rounded-full font-medium transition text-2xl"
           onClick={() => setShowPersonalDetails(true)}
         >
           Book 1:1 Call
@@ -121,11 +121,11 @@ const Mentorship = () => {
       {showPersonalDetails &&
        <div className="mt-4">
         <div className="flex justify-center items-center">
-        <div className="w-[90%] sm:w-[70%] md:w-[50%] mt-4 mb-4 text-left text-gray-800 text-[1.1rem] leading-relaxed">
-          <p className="font-normal text-gray-900">
+        <div className="w-[90%] sm:w-[70%] mt-4 mb-4 text-left text-gray-800 text-[1.1rem] leading-relaxed">
+          <p className="font-normal text-gray-900 text-[1.3rem]">
             ACT 1:1 mentorship is for serious and dedicated traders only. Membership in this Program is by application only to ensure a high level of commitment and quality. Slots are strictly limited to maintain the integrity of the one-on-one mentorship.
           </p>
-          <p className="font-normal text-gray-900 mt-4">To rule out the Junk. it’s a paid call. If you're not satisfied with us, we will refund your money.</p>
+          <p className="font-normal text-gray-900 mt-4 text-[1.3rem]">To rule out the Junk. it’s a paid call. If you're not satisfied with us, we will refund your money.</p>
         </div>
         </div>
         <PersonalForm setShowTradingForm={setShowTradingForm}/>
@@ -137,13 +137,13 @@ const Mentorship = () => {
        }
        {/* act yodha */}
       <div className="flex justify-center items-center w-[100%]">
-      <div className="w-[90%] sm:w-[70%] md:w-[50%] mt-8 mb-4 text-left text-gray-800 text-[1.1rem] leading-relaxed">
-        <h3 className="text-2xl font-bold">ACT Yodha</h3>
-        <p className="mt-3 text-gray-800 leading-relaxed">
+      <div className="w-[90%] sm:w-[70%] mt-8 mb-4 text-left text-gray-800 text-[1.1rem] leading-relaxed">
+        <h3 className="text-4xl font-bold">ACT Yodha</h3>
+        <p className="mt-3 text-gray-800 leading-relaxed text-[1.3rem]">
           This program is curated for frustrated traders who are active in the battle of stock market for years but haven't found success and consistency. Focused on trading psychology and risk management, it empowers you to master your mindset and strategies.
         </p>
-        <h4 className="mt-6 text-xl font-semibold">Key Features:</h4>
-        <ul className="mt-2 space-y-2 text-gray-700 list-disc pl-6">
+        <h4 className="mt-6 text-2xl font-semibold">Key Features:</h4>
+        <ul className="mt-2 space-y-2 text-gray-700 list-disc pl-6 text-[1.3rem]">
           <li>
             As a TMI 1:1 member, you receive our highest level of support.
           </li>
@@ -160,12 +160,12 @@ const Mentorship = () => {
       </div>
       </div>
       <div className="text-center py-3 flex flex-col gap-2 items-center">
-        <p className="max-w-2xl mx-auto text-gray-700 mt-6 text-center px-4">
+        <p className="max-w-2xl mx-auto text-gray-700 mt-6 text-center px-4 text-2xl">
           To Know more talk to our team
         </p>
         <button
           style={{ backgroundColor: "rgba(110, 147, 210, 0.47)" }}
-          className="text-black px-24  py-3 rounded-full font-medium transition"
+          className="text-black px-24  py-3 rounded-full font-medium transition text-2xl"
           onClick={() => setShowPersonalDetailsYodha(true)}
         >
           Book 1:1 Call
@@ -174,11 +174,11 @@ const Mentorship = () => {
       {showPersonalDetailsYodha &&
        <div className="mt-4">
         <div className="flex justify-center items-center">
-        <div className="w-[90%] sm:w-[70%] md:w-[50%] mt-4 mb-4 text-left text-gray-800 text-[1.1rem] leading-relaxed">
-          <p className="font-normal text-gray-900">
+        <div className="w-[90%] sm:w-[70%] mt-4 mb-4 text-left text-gray-800 text-[1.1rem] leading-relaxed">
+          <p className="font-normal text-gray-900 text-[1.3rem]">
             ACT 1:1 mentorship is for serious and dedicated traders only. Membership in this Program is by application only to ensure a high level of commitment and quality. Slots are strictly limited to maintain the integrity of the one-on-one mentorship.
           </p>
-          <p className="font-normal text-gray-900 mt-4">To rule out the Junk. it’s a paid call. If you're not satisfied with us, we will refund your money.</p>
+          <p className="font-normal text-gray-900 mt-4 text-[1.3rem]">To rule out the Junk. it’s a paid call. If you're not satisfied with us, we will refund your money.</p>
         </div>
         </div>
         <PersonalForm setShowTradingForm={setShowYodhaTradingForm}/>

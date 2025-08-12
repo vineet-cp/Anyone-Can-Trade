@@ -54,48 +54,40 @@ const Courses = () => {
         />
       </Helmet>
       <div className="mt-4 flex flex-col gap-3 items-center px-4">
-        <h2 className="text-2xl font-[500] text-center">Courses</h2>
-        <div className="w-full max-w-5xl overflow-x-auto">
-          <table className="min-w-[720px] table-fixed border border-gray-300 rounded-md text-left text-[1rem] text-gray-700">
-            <thead>
-              <tr className="bg-gray-100 text-black text-[1.1rem]">
-                <th className="w-1/3 p-3 border-r border-gray-300 font-semibold">
-                  First Month
-                </th>
-                <th className="w-1/3 p-3 border-r border-gray-300 font-semibold">
-                  Second Month
-                </th>
-                <th className="w-1/3 p-3 font-semibold">Third Month</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="p-4 border-r border-t border-gray-300">
-                  Theoretical Part.
-                </td>
-                <td className="p-4 border-r border-t border-gray-300">
-                  Practical application in the live market.
-                  <br />
-                  Risk Management and Trading Psychology.
-                </td>
-                <td className="p-4 border-t border-gray-300">
-                  For refining your Strategies in the market and submission of
-                  your track sheet to us.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p className="text-[0.95rem] text-gray-600 text-center">
+        <h2 className="text-4xl font-[500] text-center">Courses</h2>
+        <section className="text-center px-6 py-4 max-w-6xl mx-auto">
+          <p className="text-2xl font-medium mb-6">
+            All Our Courses are curated for 3 months
+          </p>
+
+          <p className="text-[1.5rem] mb-3 ">
+            <span className="font-semibold">First Month – </span>
+            Theoretical Part.
+          </p>
+
+          <p className="text-[1.5rem] mb-3">
+            <span className="font-semibold">Second Month – </span>
+            Practical application in the live market.
+            <br />
+            Risk Management and Trading Psychology.
+          </p>
+
+          <p className="text-[1.5rem]">
+            <span className="font-semibold">Third Month – </span>
+            For refining your Strategies in the market and submission of your
+            track sheet to us.
+          </p>
+        </section>
+        <p className="text-[1.4rem] font-[600] text-gray-600 text-center">
           Note: We teach 2 batches, Weekday and Weekend batches for our
-          students’ convenience. <br />
+          student's convenience. <br />
           Courses are offered in English, Hindi & Telugu.
         </p>
         {/* Video Placeholder */}
         <h2 className="text-2xl font-[500] text-center mt-4">
           Please watch this video for clear understanding of our course
         </h2>
-        <div className="w-[320px] sm:w-[500px] h-[189px] bg-gray-300 rounded-md flex items-center justify-center text-white font-semibold">
+        <div className="w-[320px] sm:w-[600px] h-[189px] bg-gray-300 rounded-md flex items-center justify-center text-white font-semibold">
           <video
             className="w-full h-full object-cover rounded-md"
             controls
@@ -109,18 +101,20 @@ const Courses = () => {
         {/* Pricing Cards */}
         <div className="w-full max-w-5xl overflow-x-auto">
           <table className="min-w-[720px] table-fixed border border-gray-300 rounded-md text-left text-[1rem] text-gray-700">
-            <thead className="bg-gray-100 text-black text-[1rem]">
-              <tr>
-                <th className="w-1/4 p-4 border-r border-gray-300 font-semibold">
-                  Features
-                </th>
-                <th className="w-1/2 p-4 border-r border-gray-300 font-semibold">
-                  ACT Achiever
-                </th>
-                <th className="w-1/2 p-4 font-semibold">ACT Pro</th>
-              </tr>
-            </thead>
-            <tbody className="text-[0.98rem]">
+          <thead className="bg-gray-100 text-black text-[1.3rem]">
+            <tr>
+              <th className="p-4 border-r border-gray-300 font-semibold" style={{ width: "25%" }}>
+                Features
+              </th>
+              <th className="p-4 border-r border-gray-300 font-semibold" style={{ width: "37.5%" }}>
+                ACT Achiever
+              </th>
+              <th className="p-4 font-semibold" style={{ width: "37.5%" }}>
+                ACT Pro
+              </th>
+            </tr>
+          </thead>
+            <tbody className="text-[1.2rem]">
               <tr className="border-t border-gray-300">
                 <td className="p-4 border-r border-gray-300 font-medium">
                   Course Details
@@ -207,10 +201,10 @@ const Courses = () => {
             </tbody>
           </table>
         </div>
-        <p className="text-[1rem] m-0 font-semibold italic text-center text-gray-800">
+        <p className="text-2xl m-0 font-semibold italic text-center text-gray-800">
           “Don’t Procrastinate, it will delay your dreams”
         </p>
-        <p className="text-[0.95rem] text-gray-600 text-center mb-4">
+        <p className="text-2xl text-gray-600 font-semibold text-center mb-4">
           Note: If we are unable to make you a successful Trader, we will refund
           your money*.
         </p>
