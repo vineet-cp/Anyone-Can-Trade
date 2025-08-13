@@ -32,7 +32,7 @@ const useRazorpayPayment = () => {
 				amount:data.amount,
 				currency:data.currency,
 				order_id:data.id,
-				key:"rzp_test_yLpAB2BjwiwHPp",
+				key:"rzp_test_62EadctnuJDqab",
 				// prefill: form,
 				handler: async function (response) {
 					console.log(response)
@@ -44,7 +44,7 @@ const useRazorpayPayment = () => {
 						},
 						body: JSON.stringify({
 							paymentId: response.razorpay_payment_id,
-							orderId: data.id,
+							orderId: response.razorpay_order_id,
 							razorpaySignature: response.razorpay_signature,
 						}),
 					});
