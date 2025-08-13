@@ -1,14 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
-import PersonalForm from "../components/PersonalForm";
-import TradingForm from "../components/TradingForm";
-import TradingFormYodha from "../components/TradingFormYodha";
+import { useNavigate } from "react-router-dom";
 
 const Mentorship = () => {
-  const [showPersonalDetails, setShowPersonalDetails] = useState(false);
-  const [showTradingForm, setShowTradingForm] = useState(false);
-  const [showYodhaTradingForm, setShowYodhaTradingForm] = useState(false)
-  const [showPersonalDetailsYodha, setShowPersonalDetailsYodha] = useState(false);
+  const navigate = useNavigate()
   return (
     <>
       <Helmet>
@@ -113,28 +108,15 @@ const Mentorship = () => {
         <button
           style={{ backgroundColor: "rgba(110, 147, 210, 0.47)" }}
           className="text-black px-24  py-3 rounded-full font-medium transition text-2xl"
-          onClick={() => setShowPersonalDetails(true)}
+          onClick={()=>navigate("/form/mastery")}
         >
           Book 1:1 Call
         </button>
       </div>
-      {showPersonalDetails &&
-       <div className="mt-4">
-        <div className="flex justify-center items-center">
-        <div className="w-[90%] sm:w-[70%] mt-4 mb-4 text-left text-gray-800 text-[1.1rem] leading-relaxed">
-          <p className="font-normal text-gray-900 text-[1.3rem]">
-            ACT 1:1 mentorship is for serious and dedicated traders only. Membership in this Program is by application only to ensure a high level of commitment and quality. Slots are strictly limited to maintain the integrity of the one-on-one mentorship.
-          </p>
-          <p className="font-normal text-gray-900 mt-4 text-[1.3rem]">To rule out the Junk. it’s a paid call. If you're not satisfied with us, we will refund your money.</p>
-        </div>
-        </div>
-        <PersonalForm setShowTradingForm={setShowTradingForm}/>
-       </div>
-       }
-       {
+       {/* {
         showTradingForm && 
         <TradingForm />
-       }
+       } */}
        {/* act yodha */}
       <div className="flex justify-center items-center w-[100%]">
       <div className="w-[90%] sm:w-[70%] mt-8 mb-4 text-left text-gray-800 text-[1.1rem] leading-relaxed">
@@ -166,27 +148,14 @@ const Mentorship = () => {
         <button
           style={{ backgroundColor: "rgba(110, 147, 210, 0.47)" }}
           className="text-black px-24  py-3 rounded-full font-medium transition text-2xl"
-          onClick={() => setShowPersonalDetailsYodha(true)}
+          onClick={()=>navigate("/form/yodha")}
         >
           Book 1:1 Call
         </button>
       </div> 
-      {showPersonalDetailsYodha &&
-       <div className="mt-4">
-        <div className="flex justify-center items-center">
-        <div className="w-[90%] sm:w-[70%] mt-4 mb-4 text-left text-gray-800 text-[1.1rem] leading-relaxed">
-          <p className="font-normal text-gray-900 text-[1.3rem]">
-            ACT 1:1 mentorship is for serious and dedicated traders only. Membership in this Program is by application only to ensure a high level of commitment and quality. Slots are strictly limited to maintain the integrity of the one-on-one mentorship.
-          </p>
-          <p className="font-normal text-gray-900 mt-4 text-[1.3rem]">To rule out the Junk. it’s a paid call. If you're not satisfied with us, we will refund your money.</p>
-        </div>
-        </div>
-        <PersonalForm setShowTradingForm={setShowYodhaTradingForm}/>
-       </div>
-       }
-       {
+       {/* {
         showYodhaTradingForm && <TradingFormYodha />
-       }
+       } */}
     </>
   );
 };

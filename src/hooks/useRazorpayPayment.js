@@ -4,7 +4,7 @@ import { useRazorpay } from "react-razorpay";
 const useRazorpayPayment = () => {
 	const { Razorpay } = useRazorpay();
 
-	const triggerPayment = async (form) => {
+	const triggerPayment = async (form, type) => {
 		try {
 			// Step 1: Send user data to backend to create work order + Razorpay order
 			const res = await fetch("http://localhost:8080/api/create-order", {
@@ -21,7 +21,7 @@ const useRazorpayPayment = () => {
 
 			const data = await res.json();
 
-			if (!data || !data) {
+			if (!data) {
 				alert("Failed to get payment details");
 				return;
 			}
