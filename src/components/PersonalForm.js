@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import useRazorpayPayment from "../hooks/useRazorpayPayment";
 import { useParams } from "react-router-dom";
+import { Currency } from "lucide-react";
 
 const PersonalForm = () => {
   const { triggerPayment } = useRazorpayPayment();
-  const {type} = useParams();
+  const { type } = useParams();
   const capitalizedType = type.charAt(0).toUpperCase() + type.slice(1);
   const [form, setForm] = useState({
     name: "",
     age: "",
     email: "",
     phoneNumber: "",
+    currency: "INR",
+    amount: 999,
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,7 +30,9 @@ const PersonalForm = () => {
     <div className="mt-[6rem]">
       <div className="flex justify-center items-center">
         <div className="w-[90%] sm:w-[70%] mt-4 mb-4 text-left text-gray-800 text-[1.1rem] leading-relaxed">
-          <h3 className="text-3xl font-bold text-center">ACT {capitalizedType}</h3>
+          <h3 className="text-3xl font-bold text-center">
+            ACT {capitalizedType}
+          </h3>
           <p className="font-normal text-gray-900 text-[1.3rem]">
             ACT 1:1 mentorship is for serious and dedicated traders only.
             Membership in this Program is by application only to ensure a high
@@ -109,9 +114,19 @@ const PersonalForm = () => {
       <div className="flex flex-col gap-2 items-center mt-3 mb-2 text-[1.1rem]">
         <p className="font-medium">Start Trading with a Personal Mentor.</p>
         <button
-          style={{ backgroundColor: "rgba(110, 147, 210, 0.47)" }}
+          style={{
+            backgroundColor: Object.values(form).includes("")
+              ? "rgba(110, 147, 210, 0.25)" // lighter shade for disabled
+              : "rgba(110, 147, 210, 0.47)",
+          }}
           onClick={handleSubmit}
-          className="text-[#000000] px-24  py-3 rounded-full font-medium transition text-[1.2rem]"
+          disabled={Object.values(form).includes("")}
+          className={`text-[#000000] px-24 py-3 rounded-full font-medium text-[1.2rem] transition 
+            ${
+              Object.values(form).includes("")
+                ? "cursor-not-allowed opacity-50 shadow-none"
+                : "cursor-pointer hover:shadow-lg hover:scale-[1.02]"
+            }`}
         >
           Pay 999/-
         </button>
