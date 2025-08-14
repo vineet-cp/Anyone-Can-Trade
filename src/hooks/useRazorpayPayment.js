@@ -9,7 +9,7 @@ const useRazorpayPayment = () => {
   const triggerPayment = async (form, type) => {
     try {
       // Step 1: Create work order + Razorpay order
-      const res = await fetch("http://localhost:8080/api/create-order", {
+      const res = await fetch("http://35.154.64.133:8080/api/create-order", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -41,27 +41,36 @@ const useRazorpayPayment = () => {
         handler: async function (response) {
           console.log(response);
           // Step 3: Verify payment with backend
-          const verifyRes = await fetch("http://localhost:8080/api/verify-payment", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              paymentId: response.razorpay_payment_id,
-              orderId: response.razorpay_order_id,
-              razorpaySignature: response.razorpay_signature,
-            }),
-          });
+          const verifyRes = await fetch(
+            "http://35.154.64.133:8080/api/verify-payment",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                paymentId: response.razorpay_payment_id,
+                orderId: response.razorpay_order_id,
+                razorpaySignature: response.razorpay_signature,
+              }),
+            }
+          );
 
-		  const finalRes = await verifyRes.json();
+          const finalRes = await verifyRes.json();
 
           if (finalRes.status !== "failure") {
             alert("Payment successful and verified");
-			if(type === "mastery"){
-             navigate("/trading-form/mastery", { state: { paymentId: data.paymentId, courseType: type } });
-			}else{
-              navigate("/trading-form/yodha", { state: { paymentId: data.paymentId, courseType: type } });
-			}
+            if (type === "mastery") {
+              navigate("/trading-form/mastery", {
+                state: { paymentId: data.paymentId, courseType: type },
+              });
+            } else if( type === "yodha") {
+              navigate("/trading-form/yodha", {
+                state: { paymentId: data.paymentId, courseType: type },
+              });
+            }else{
+              alert("Payment Successfull")
+            }
           } else {
             alert("Payment verification failed");
           }

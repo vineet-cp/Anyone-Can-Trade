@@ -38,7 +38,7 @@ const handleSubmit = async () => {
   };
 
   try {
-    const response = await fetch("http://localhost:8080/api/save", {
+    const response = await fetch("http://35.154.64.133:8080/api/save", {
       method: "POST",
       headers: {
         "Content-Type": "application/json" // Sending JSON

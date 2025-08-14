@@ -2,6 +2,7 @@ import React from "react";
 import tick from "./../assets/images/testimonial/tick.svg";
 import whatsApp from "./../assets/images/testimonial/whatsapp.svg";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 
 const pricingData = [
   {
@@ -37,6 +38,7 @@ const pricingData = [
 ];
 
 const Courses = () => {
+  const navigate = useNavigate()
   return (
     <>
       <Helmet>
@@ -188,12 +190,12 @@ const Courses = () => {
                   Enroll
                 </td>
                 <td className="p-4 border-r border-gray-300">
-                  <button className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition">
+                  <button onClick={()=>navigate("/form/achiever")} className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition">
                     Join Now
                   </button>
                 </td>
                 <td className="p-4">
-                  <button className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition">
+                  <button onClick={()=>navigate("/form/pro")} className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition">
                     Join Now
                   </button>
                 </td>

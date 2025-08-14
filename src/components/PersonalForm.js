@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import useRazorpayPayment from "../hooks/useRazorpayPayment";
 import { useParams } from "react-router-dom";
 import { Currency } from "lucide-react";
@@ -7,13 +7,23 @@ const PersonalForm = () => {
   const { triggerPayment } = useRazorpayPayment();
   const { type } = useParams();
   const capitalizedType = type.charAt(0).toUpperCase() + type.slice(1);
+  const finalAmount = useMemo(()=>{
+    if(type === "yodha" || type === "mastery"){
+      return 999
+    }else if(type === "achiever"){
+      return 20000
+    }else if(type === "pro"){
+      return 36000
+    }
+  },[type])
   const [form, setForm] = useState({
     name: "",
     age: "",
     email: "",
     phoneNumber: "",
     currency: "INR",
-    amount: 999,
+    amount: finalAmount,
+    courseType: type.toUpperCase()
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
